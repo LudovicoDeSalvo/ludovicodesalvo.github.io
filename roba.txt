@@ -1,0 +1,26 @@
+Sono una persona attiva, mi piace continuamente fare nuove espererienze e apprendere nuove cose. Sono molto logico e razionale, organizzato e detail-oriented. Sono sempre stato appassionato di tecnologia ed informatica, in particolare della programmazione, ma anche di un po' tutte le varie discipline come la matematica, filosofia, economia, psicologia, fisica; e anche delle varie arti, specialmente il videogioco e il cinema. Cerco un percorso di carriera che sia stimolante e creativo di qualcosa che sia utile e innovativo.
+EDUCATION AND SKILLS
+
+-Laurea Trinennale in Ingegneria Gestionale presso Università della Calabria. Esami sostenuti: Analisi 1, Analisi 2, Algebra, Fisica, Chimica, Fondamenti d'Informatica, Modelli Probabilistici, Economia ed Organizzazione Aziendale, Tecniche di Programmazione, Fisica Tecnica, Sistemi Energetici, Laboratorio CAD, Laboratorio CAM, Meccanica dei Materiali, Tecnologie Industriali, Controlli Automatici, Gestione Aziendale, Sistemi Elettrici, Ricerca Operativa 1, Ricerca Operativa 2, Impianti Industriali, Economia Industriale.
+-Diploma Liceo Scientifico
+
+-Programmazione: ho programmato in C++ , C# , Python , Java , Javascript; in ambiti universitari e per progetti personali (vedi sezione progetti). Inoltre conosco la logica di base di HTML e CSS.
+-English: Ho una avanzata conoscenza dell'inglese, praticato giornalmente, certificata con test Cambridge C1
+-Pacchetto Office
+-Team skills: sono capace di lavorare in gruppo e gestire lavoro coordinato
+EXPERIENCE
+
+Estate 2020:
+Cameriere presso lido ristorante "Il Ristorantino", Trebisacce
+Estate 2019:
+Cameriere presso lido ristorante "Il Ristorantino", Trebisacce
+PROGETTI:
+AVOID:
+
+Avoid è un gioco realizzato completamente in Javascript quasi da zero. Tutte le logiche di gioco (il sistema di movimento e collisioni, tutte le entitità di gioco e la loro logica comportamentale) sono state programmate interamente da me, affidandomi all'engine di gioco solo per le cose di estremo basso livello come la renderizzazione delle figure e la gestione degli frames. Il gioco è disponibile online gratuitamente qui e il codice sorgente sulla mia pagina github.
+QUESTO SITO:
+
+Come progetto full-stack ho voluto realizzare un sito, e ho colto l'occassione per avere un curriculum unico.
+NN:
+
+---

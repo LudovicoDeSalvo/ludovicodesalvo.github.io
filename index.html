@@ -1,120 +1,289 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
 
-<body>
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="jquery.cookie.js"></script>
+  </head>
+
+  <body class="bg-light">
+    <nav class="navbar sticky-top">
+      <div class="navbar-brand">
+        <div class="navbar-item">
+          <h1 lang="it">Ludovico De Salvo ITA</h1>
+          <h1 lang="en">Ludovico De Salvo EN</h1>
+          <h1>Management Engineer , Programmer</h1>
+        </div>
+      </div>
+
+      <div class="d-grid gap-2 d-md-flex justify-content-end">
+        <button id="langToIt" type="button" class="btn btn-dark">
+          <img src="icons/italy.png" width="45px" height="45px;" />
+        </button>
+        <button id="langToEn" type="button" class="btn btn-circle btn-dark">
+          <img src="icons/united-kingdom.png" width="45px" height="45px;" />
+        </button>
+        <a href="mailto:ludovicodesalvo@proton.me">
+          <button class="btn btn-light btn-circle m-1">
+            <i class="fa-solid fa-envelope icon-2x"></i>
+          </button>
+        </a>
+      </div>
+    </nav>
 
     <div class="container-fluid toPad">
-        
-        <nav class="navbar sticky-top bg-body-tertiary">
-        
-            <div class="col navbar-elem">
-                <div>
-                    <img src="profile 400px.webp" class="rounded float-start" alt="Profile" width=128px height=128px;>
-                </div>
-                <div>
-                    <h1>Ludovico De Salvo</h1>
-                    <h1>Management Engineer , Programmer</h1>
-                </div>
-                <div>
-                    <div class="d-grid gap-2 d-md-flex justify-content-end">
-                        <button type="button" class="btn btn-info">IT / ENG</button>
-                        <button type="button" class="btn btn-info">Email</button>
-                    </div>
-                </div>
-            </div>
-        
-        </nav>
+      <div class="row">
+        <div class="col-lg-3 bg-dark text-white text-center py-4">
+          <div class="header-left py-2">
+            <img src="profile 400px.webp" class="img-thumbnail rounded-circle
+            mb-2" width="320px" height="320px"" />
+          </div>
 
-        
-        
+          <div>
+            <h5 class="text-uppercase bg-white text-dark py-2 rounded-pill">
+              Info & Links
+            </h5>
 
-        <div class="row">
-            <div class="col scrollable" style="font-size: 20px;">
-                <div>
-                    <h2>BIO</h2>
-                    <p>Sono una persona attiva, mi piace continuamente fare nuove espererienze e apprendere nuove cose. Sono molto logico e razionale,
-                    organizzato e detail-oriented. Sono sempre stato appassionato di tecnologia ed informatica,
-                    in particolare della programmazione, ma anche di un po' tutte le varie discipline come la
-                    matematica, filosofia, economia, psicologia, fisica; e anche delle varie arti,
-                    specialmente il videogioco e il cinema. Cerco un percorso di carriera che sia stimolante e creativo
-                    di qualcosa che sia utile e innovativo.</p>
+            <ul class="list-unstyled text-white-50 ml-5 py-2 text-left">
+              <li class="list-item row py-1">
+                <div class="col-md-auto justify-content-start">
+                  <i class="fa-solid fa-user mx-2"></i>
                 </div>
-                
-                <div>
-                    <h2>EDUCATION AND SKILLS</h2>
-                    <p>-Laurea Trinennale in Ingegneria Gestionale presso Università della Calabria.
-                        Esami sostenuti: Analisi 1, Analisi 2, Algebra, Fisica, Chimica, Fondamenti d'Informatica, Modelli Probabilistici, Economia ed Organizzazione Aziendale,
-                        Tecniche di Programmazione, Fisica Tecnica, Sistemi Energetici, Laboratorio CAD, Laboratorio CAM, Meccanica dei Materiali, Tecnologie Industriali, 
-                        Controlli Automatici, Gestione Aziendale, Sistemi Elettrici, Ricerca Operativa 1, Ricerca Operativa 2, Impianti Industriali, Economia Industriale.<br>
-                    -Diploma Liceo Scientifico</p>
-                    <p>-Programmazione: ho programmato in C++ , C# , Python , Java , Javascript; in ambiti universitari e per progetti personali (vedi sezione progetti). 
-                    Inoltre conosco la logica di base di HTML e CSS.<br>
-                    -<b>English</b>: Ho una avanzata conoscenza dell'inglese, praticato giornalmente, certificata con test Cambridge C1<br>
-                    -Pacchetto Office<br>
-                    -Team skills: sono capace di lavorare in gruppo e gestire lavoro coordinato</p>
+                <div class="col justify-content-start">
+                  24 anni (Gennaio 1999)
                 </div>
+              </li>
+              <li class="list-item row py-1">
+                <div class="col-md-auto justify-content-start">
+                  <i class="fa-solid fa-envelope mx-2"></i>
+                </div>
+                <div class="col justify-content-start">
+                  ludovicodesalvo@proton.me
+                </div>
+              </li>
+              <li class="list-item row">
+                <div class="col-md-auto justify-content-start">
+                  <i class="fa-solid fa-location-dot mx-2"></i>
+                </div>
+                <div class="col justify-content-start">
+                  Francavilla Marittima (CS) Nazionalità Italiana
+                </div>
+              </li>
+              <li class="list-item row py-1">
+                <div class="col">
+                  <button type="button" class="btn btn-dark">
+                    <a
+                      target="_blank"
+                      href="https://github.com/LudovicoDeSalvo"
+                    >
+                      <img
+                        src="icons/github-mark-white.png"
+                        width="32x"
+                        height="32px;"
+                      />
+                    </a>
+                  </button>
 
-                <div>
-                    <h2>EXPERIENCE</h2>
-                    <p>Estate 2020:<br>
-                    Cameriere presso lido ristorante "Il Ristorantino", Trebisacce<br>
-                    Estate 2019:<br>
-                    Cameriere presso lido ristorante "Il Ristorantino", Trebisacce</p>
+                  <button type="button" class="btn btn-dark">
+                    <img
+                      src="icons/LI-In-Bug.png"
+                      width="32px"
+                      height="28px;"
+                    />
+                  </button>
                 </div>
-                <div>
-                    <h2>PROGETTI:</h2>
-                    <h3>AVOID:</h3>
-                    <p>Avoid è un gioco realizzato completamente in Javascript quasi da zero. Tutte le logiche di gioco (il sistema di movimento e collisioni, tutte le entitità
-                    di gioco e la loro logica comportamentale) sono state programmate interamente da me, affidandomi all'engine di gioco solo per le cose di estremo basso livello
-                    come la renderizzazione delle figure e la gestione degli frames. Il gioco è disponibile online gratuitamente qui e il codice sorgente sulla mia pagina github.</p>
-                    <h3>QUESTO SITO:</h3>
-                    <p>Come progetto full-stack ho voluto realizzare un sito, e ho colto l'occassione per avere un curriculum unico.</p>
-                    <h3>NN:</h3>
-                    <p>---</p>
-                </div>
-            </div>
+              </li>
+            </ul>
+          </div>
 
-            <div class="col-sm-3 fixed">
-                <div>
-                    Info:
-                    24 Anni (Gennaio 1999)
-                    Francavilla Marittima (CS)
-                    Nazionalità Italiana
+          <div>
+            <h5 class="text-uppercase bg-white text-dark py-2 rounded-pill">
+              Lingue
+            </h5>
+            <ul class="list-unstyled row text-white-50 ml-5 py-1 text-left">
+              <div class="col-md-auto justify-content-start">
+                <img src="icons/italy.png" width="22px" height="22px;" />
+              </div>
+              <div class="col">Madrelingua</div>
+
+              <div class="row py-1">
+                <div class="col-md-auto justify-content-start">
+                  <img
+                    src="icons/united-kingdom.png"
+                    width="22px"
+                    height="22px;"
+                  />
                 </div>
-                <div>
-                    Email:
-                    ludovicodesalvo@proton.met
-                    Linkedin:
-                    ---
-                    Github:
-                    ---
-                </div>
-                <div>
-                    Lingue:
-                    Italiano: Madrelingua
-                    Inglese: Avanzato (C1)
-                </div>
-            </div>
+                <div class="col">C1</div>
+              </div>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="text-uppercase bg-white text-dark py-2 rounded-pill">
+              soft skills
+            </h5>
+            <ul class="list text-white-50 ml-5 py-2 text-left text-capitalize">
+              <li class="list-item">problem solving skills</li>
+              <li class="list-item">verbal communication</li>
+              <li class="list-item">random stuff</li>
+            </ul>
+          </div>
         </div>
 
+        <div class="col-lg-8 bg-light text-dark py-4 px-5">
+          <div class="header-right">
+            <h4 class="text-uppercase">profilo</h4>
+            <hr />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+              nobis eum reprehenderit quam asperiores? At nostrum hic quisquam
+              dolores quas itaque soluta autem, tempora, fugit ab vitae
+              exercitationem omnis maxime corporis non rem ullam error dolorem
+              harum enim provident. Fugit autem explicabo corporis nihil nobis
+              eum expedita enim amet adipisci.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-uppercase">Esperienza lavorativa</h4>
+            <hr />
+
+            <ul class="list">
+              <li class="list-item">
+                <h5 class="display-9 text-uppercase">Stuff</h5>
+                <h6 class="text-uppercase text-black-50">
+                  company name / 2020-present
+                </h6>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, rerum similique voluptates numquam alias non ipsam
+                  ullam beatae atque. Vel dicta quaerat nam soluta repudiandae
+                  inventore illum tempora at cupiditate eveniet nobis, debitis
+                  minus eum quo? Neque ratione praesentium amet quia itaque
+                  quidem repudiandae veniam quo, quam illo accusantium
+                  consequuntur.
+                </p>
+              </li>
+              <li class="list-item">
+                <h5 class="display-9 text-uppercase">stuff</h5>
+                <h6 class="text-uppercase text-black-50">
+                  company name / 2020-present
+                </h6>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, rerum similique voluptates numquam alias non ipsam
+                  ullam beatae atque. Vel dicta quaerat nam soluta repudiandae
+                  inventore illum tempora at cupiditate eveniet nobis, debitis
+                  minus eum quo? Neque ratione praesentium amet quia itaque
+                  quidem repudiandae veniam quo, quam illo accusantium
+                  consequuntur.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-uppercase">Educazione e skills</h4>
+            <hr />
+
+            <ul class="list">
+              <li class="list-item">
+                <h5 class="display-9 text-uppercase">stuff</h5>
+                <h6 class="text-uppercase text-black-50">
+                  company name / 2020-present
+                </h6>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, rerum similique voluptates numquam alias non ipsam
+                  ullam beatae atque. Vel dicta quaerat nam soluta repudiandae
+                  inventore illum tempora at cupiditate eveniet nobis, debitis
+                  minus eum quo? Neque ratione praesentium amet quia itaque
+                  quidem repudiandae veniam quo, quam illo accusantium
+                  consequuntur.
+                </p>
+              </li>
+              <li class="list-item">
+                <h5 class="display-9 text-uppercase">stuff</h5>
+                <h6 class="text-uppercase text-black-50">
+                  company name / 2020-present
+                </h6>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, rerum similique voluptates numquam alias non ipsam
+                  ullam beatae atque. Vel dicta quaerat nam soluta repudiandae
+                  inventore illum tempora at cupiditate eveniet nobis, debitis
+                  minus eum quo? Neque ratione praesentium amet quia itaque
+                  quidem repudiandae veniam quo, quam illo accusantium
+                  consequuntur.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-uppercase">Progetti</h4>
+            <hr />
+
+            <ul class="list">
+              <li class="list-item">
+                <h5 class="display-9 text-uppercase">stuff</h5>
+                <h6 class="text-uppercase text-black-50">
+                  company name / 2020-present
+                </h6>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, rerum similique voluptates numquam alias non ipsam
+                  ullam beatae atque. Vel dicta quaerat nam soluta repudiandae
+                  inventore illum tempora at cupiditate eveniet nobis, debitis
+                  minus eum quo? Neque ratione praesentium amet quia itaque
+                  quidem repudiandae veniam quo, quam illo accusantium
+                  consequuntur.
+                </p>
+              </li>
+              <li class="list-item">
+                <h5 class="display-9 text-uppercase">stuff</h5>
+                <h6 class="text-uppercase text-black-50">
+                  company name / 2020-present
+                </h6>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, rerum similique voluptates numquam alias non ipsam
+                  ullam beatae atque. Vel dicta quaerat nam soluta repudiandae
+                  inventore illum tempora at cupiditate eveniet nobis, debitis
+                  minus eum quo? Neque ratione praesentium amet quia itaque
+                  quidem repudiandae veniam quo, quam illo accusantium
+                  consequuntur.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous">
-    </script>
-</body>
-
+    <script src="languageHandler.js"></script>
+  </body>
 </html>

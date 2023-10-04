@@ -1,38 +1,30 @@
-body {
-    background-color: #252525;
-    padding: 2vh;
+.navbar {
+  background-color: #212529;
 }
 
 h1 {
-    font-family: SpaceGrotesk-Light;
-    color: rgb(15, 14, 14);
-    line-height: 1.2;
-    font-weight: 500;
-    font-size: 44px;
+  font-size: 32px;
+  color: #ffffff;
 }
 
-h2 {
-    font-family: SpaceGrotesk-Medium;
-    max-width: 520px;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 16px;
+.btn-circle {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  padding: 0;
+  border-radius: 50%;
 }
 
-
-
-
-[class*="col"] {
-
-    background-color: #eeeeee;
+.btn-dark {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  padding: 0;
+  border-radius: 50%;
 }
 
-
-.fixed {
-    height: 84vh;
-}
-
-.scrollable {
-    height: 84vh;
-    overflow-y: scroll;
+.col-lg-3 {
+  font-family: "Trebuchet MS", sans-serif;
 }
