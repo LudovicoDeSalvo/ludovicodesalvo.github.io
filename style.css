@@ -4,7 +4,10 @@
 
 h1 {
   font-size: 32px;
-  color: #ffffff;
+  font-weight: 501;
+  font-family: FreeMono, monospace;
+
+  color: #fefefe;
 }
 
 .btn-circle {
@@ -25,6 +28,10 @@ h1 {
   border-radius: 50%;
 }
 
-.col-lg-3 {
+.ml-5 {
   font-family: "Trebuchet MS", sans-serif;
+}
+
+html {
+  background: white;
 }
