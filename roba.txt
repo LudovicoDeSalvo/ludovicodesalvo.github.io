@@ -16,7 +16,7 @@ Estate 2019:
 Cameriere presso lido ristorante "Il Ristorantino", Trebisacce
 PROGETTI:
 AVOID:
-
+sample sample
 Avoid è un gioco realizzato completamente in Javascript quasi da zero. Tutte le logiche di gioco (il sistema di movimento e collisioni, tutte le entitità di gioco e la loro logica comportamentale) sono state programmate interamente da me, affidandomi all'engine di gioco solo per le cose di estremo basso livello come la renderizzazione delle figure e la gestione degli frames. Il gioco è disponibile online gratuitamente qui e il codice sorgente sulla mia pagina github.
 QUESTO SITO:
 
