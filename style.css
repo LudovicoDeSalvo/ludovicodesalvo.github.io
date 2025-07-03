@@ -1,37 +1,114 @@
-.navbar {
-  background-color: #212529;
+/* --- Global Reset & Body Styling --- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-  font-size: 32px;
-  font-weight: 501;
-  font-family: FreeMono, monospace;
-
-  color: #fefefe;
+/* UPDATED: Softer background color and centered flex container */
+body {
+    background-color: #121212; /* Softer, dark gray background */
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
-.btn-circle {
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
-  text-align: center;
-  padding: 0;
-  border-radius: 50%;
+/* UPDATED: The main container now uses flexbox to stack the name and nav vertically */
+.hub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.btn-dark {
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
-  text-align: center;
-  padding: 0;
-  border-radius: 50%;
+/* --- Typography --- */
+
+/* NEW: Styling for your name */
+.owner-name {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #888888; /* A dimmer gray to make it secondary */
+    margin-bottom: 3rem; /* Space between name and nav links */
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.ml-5 {
-  font-family: "Trebuchet MS", sans-serif;
+.hub-navigation ul {
+    list-style: none;
+    text-align: center;
 }
 
-html {
-  background: white;
+.hub-navigation a {
+    display: inline-block; /* Required for padding and other properties to work well */
+    position: relative; /* Crucial for positioning the animated line */
+    padding-bottom: 8px; /* Space for the underline to appear */
+    
+    text-decoration: none;
+    color: inherit;
+    font-size: 3rem;
+    font-weight: 300;
+    
+    /* UPDATED: Transition for opacity only */
+    transition: opacity 0.4s ease;
+}
+
+/* --- Animations --- */
+
+/* NEW: Keyframe animation for the fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* NEW: Apply the animation to all list items */
+.hub-navigation li {
+    margin: 1.5rem 0;
+    opacity: 0; /* Start as invisible */
+    animation: fadeIn 0.5s ease-out forwards; /* Apply the animation */
+}
+
+/* NEW: Stagger the animation for each link */
+.hub-navigation li:nth-child(1) { animation-delay: 0.2s; }
+.hub-navigation li:nth-child(2) { animation-delay: 0.4s; }
+.hub-navigation li:nth-child(3) { animation-delay: 0.6s; }
+
+/* --- Enhanced Hover Effect --- */
+
+/* NEW: This creates the line using the ::after pseudo-element */
+.hub-navigation a::after {
+    content: ''; /* Pseudo-elements must have a content property */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    width: 0; /* The line is initially invisible */
+    height: 1px; /* The thickness of the line */
+    background-color: #e0e0e0;
+    
+    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth growing animation */
+}
+
+/* UPDATED: The new hover effect logic */
+.hub-container:hover .hub-navigation a {
+    opacity: 0.5;
+}
+
+.hub-container .hub-navigation a:hover {
+    opacity: 1;
+}
+
+/* NEW: On hover, make the ::after pseudo-element (the line) grow to 100% width */
+.hub-navigation a:hover::after {
+    width: 100%;
 }
