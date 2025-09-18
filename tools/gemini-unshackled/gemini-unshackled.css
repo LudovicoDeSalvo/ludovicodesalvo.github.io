@@ -365,3 +365,27 @@ code {
 #home-btn:hover {
     background-color: #5a6268;
 }
+
+/* Cold Start Warning */
+#cold-start-warning {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    font-size: 0.9em;
+    color: var(--subtle-text-color);
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+#cold-start-warning.hidden {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    opacity: 0;
+    border: none;
+}
