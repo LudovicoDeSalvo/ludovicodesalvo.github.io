@@ -1,0 +1,148 @@
+/* --- 1. CSS Variables (Theme Definition) --- */
+:root {
+    --color-background: #121212; /* Very dark grey, almost black */
+    --color-surface: #1E1E1E;    /* Lighter grey for cards/surfaces */
+    --color-primary: #BB86FC;     /* A vibrant purple for accents */
+    --color-on-background: #E0E0E0; /* Light grey for primary text */
+    --color-on-surface-medium: #AAAAAA; /* Medium grey for secondary text */
+    
+    --font-family-main: 'Roboto', sans-serif;
+    --card-border-radius: 8px;
+    --shadow-elevation-low: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    --shadow-elevation-medium: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+/* --- 2. Global Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    font-family: var(--font-family-main);
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+/* --- 3. Header Styling --- */
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative; /* Needed for positioning the home button */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: var(--color-on-surface-medium);
+    max-width: 600px;
+    margin: 0.5rem auto 0;
+}
+
+.home-button {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: var(--color-on-surface-medium);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-button .material-icons {
+    font-size: 28px;
+    vertical-align: middle;
+}
+
+.home-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-on-background);
+}
+
+
+/* --- 4. Grid Layout --- */
+.tool-grid {
+    display: grid;
+    /* Create responsive columns: min width of 300px, max of 1 fraction of the space */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* Space between cards */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- 5. Tool Card Styling --- */
+.tool-card-link {
+    text-decoration: none; /* Remove underline from the link wrapper */
+    color: inherit;
+}
+
+.tool-card {
+    background-color: var(--color-surface);
+    border-radius: var(--card-border-radius);
+    overflow: hidden; /* Ensures content respects the rounded corners */
+    box-shadow: var(--shadow-elevation-low);
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-icon {
+    margin-right: 1.5rem;
+}
+
+.card-icon .material-icons {
+    font-size: 48px; /* Make icon larger */
+    color: var(--color-primary);
+}
+
+.card-content h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    color: var(--color-on-background);
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: var(--color-on-surface-medium);
+}
+
+/* --- 6. Interactive Hover Effect --- */
+.tool-card:hover {
+    transform: translateY(-8px); /* Lifts the card up slightly */
+    box-shadow: var(--shadow-elevation-medium); /* A more pronounced shadow */
+}
+
+
+/* --- 7. Responsiveness --- */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    header {
+        margin-bottom: 3rem;
+        text-align: left;
+        padding-left: 50px; /* Make space for the home button */
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .home-button {
+        top: 0;
+        left: 0;
+        transform: none; /* Reset transform for smaller screens */
+    }
+}

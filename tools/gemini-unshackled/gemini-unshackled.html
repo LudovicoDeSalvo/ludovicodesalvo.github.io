@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Web Client</title>
+    <link rel="stylesheet" href="gemini-unshackled.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+    <div id="app-container">
+        <h1>Gemini Web Client</h1>
+
+        <div id="settings-panel">
+            <div class="setting-item">
+                <label for="owner-password">Owner Password:</label>
+                <input type="password" id="owner-password" placeholder="Enter password for default API key">
+            </div>
+            <div class="setting-item" id="api-key-container">
+                <label for="api-key">Your Gemini API Key:</label>
+                <input type="text" id="api-key" placeholder="Enter your key if you're not the owner">
+            </div>
+
+            <fieldset class="setting-item">
+                <legend>Model Selection</legend>
+                <input type="radio" id="gemini-flash" name="model" value="gemini-2.5-flash" checked>
+                <label for="gemini-flash">Gemini 2.5 Flash</label>
+                <input type="radio" id="gemini-pro" name="model" value="gemini-2.5-pro">
+                <label for="gemini-pro">Gemini 2.5 Pro</label>
+            </fieldset>
+
+            <fieldset class="setting-item" id="safety-settings">
+                <legend>Disable Safety Flags (Block None)</legend>
+                <input type="checkbox" id="harm-category-harassment" value="HARM_CATEGORY_HARASSMENT">
+                <label for="harm-category-harassment">Harassment</label>
+                <input type="checkbox" id="harm-category-hate-speech" value="HARM_CATEGORY_HATE_SPEECH">
+                <label for="harm-category-hate-speech">Hate Speech</label>
+                <input type="checkbox" id="harm-category-sexually-explicit" value="HARM_CATEGORY_SEXUALLY_EXPLICIT">
+                <label for="harm-category-sexually-explicit">Sexually Explicit</label>
+                <input type="checkbox" id="harm-category-dangerous-content" value="HARM_CATEGORY_DANGEROUS_CONTENT">
+                <label for="harm-category-dangerous-content">Dangerous Content</label>
+            </fieldset>
+        </div>
+
+        <div id="chat-window">
+            </div>
+
+        <form id="prompt-form">
+            <input type="text" id="prompt-input" placeholder="Enter your prompt..." autocomplete="off">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

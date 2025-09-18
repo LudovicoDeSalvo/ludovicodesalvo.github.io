@@ -1,0 +1,212 @@
+/* --- 1. Global Styles & Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --bg-color: #1E1E1E;
+    --surface-color: #2C2C2C;
+    --primary-color: #007BFF;
+    --primary-hover-color: #0056b3;
+    --text-color: #E0E0E0;
+    --subtle-text-color: #888;
+    --border-color: #444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* --- 2. Main App Container --- */
+#app-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 500;
+    color: white;
+}
+
+/* --- 3. Settings Panel --- */
+#settings-panel {
+    background-color: var(--bg-color);
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.setting-item {
+    flex: 1 1 300px; /* Allows items to wrap nicely */
+}
+
+.setting-item label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: var(--subtle-text-color);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+fieldset legend {
+    padding: 0 5px;
+    font-size: 0.9em;
+    color: var(--subtle-text-color);
+}
+
+#safety-settings label,
+fieldset label {
+    margin-right: 15px;
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+input[type="radio"], 
+input[type="checkbox"] {
+    accent-color: var(--primary-color); /* Modern way to style radio/checkbox color */
+    margin-right: 5px;
+}
+
+/* --- 4. Chat Window --- */
+#chat-window {
+    height: 50vh; /* 50% of the viewport height */
+    overflow-y: auto;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.message {
+    max-width: 80%;
+    padding: 12px 15px;
+    border-radius: 18px;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: var(--primary-color);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.model-message {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+/* --- 5. Input Form --- */
+#prompt-form {
+    display: flex;
+    gap: 10px;
+}
+
+#prompt-input {
+    flex-grow: 1; /* Input takes up available space */
+    padding: 12px;
+    font-size: 1em;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-color);
+}
+
+#prompt-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+#prompt-form button {
+    padding: 0 20px;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#prompt-form button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+#prompt-form button:active {
+    transform: scale(0.98);
+}
+
+/* --- 6. Custom Scrollbar --- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* --- 7. Responsive Design --- */
+@media (max-width: 850px) {
+    #app-container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
