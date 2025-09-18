@@ -1,74 +1,81 @@
-// 1. Import necessary packages
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-const { GoogleGenerativeAI } = require('@google/generative-ai'); // Import the Google AI SDK
+const { GoogleGenerativeAI } = require('@google/generative-ai');
 
-// 2. Set up the Express app
 const app = express();
 const PORT = 3000;
-
-// 3. Configure middleware
 app.use(cors());
 app.use(express.json());
 
-// 4. Initialize the Google Generative AI client
-// This uses the API key from your .env file
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+// New validation endpoint
+app.post('/api/validate', async (req, res) => {
+    try {
+        const { password, apiKey } = req.body;
+        const isOwner = password && password === process.env.OWNER_PASSWORD;
+        const keyToValidate = isOwner ? process.env.GEMINI_API_KEY : apiKey;
 
-// 5. Define the main chat route
-app.post('/api/chat', async (req, res) => {
-  try {
-    const { prompt, model, safetySettings, isOwner, apiKey } = req.body;
+        if (!keyToValidate) {
+            return res.status(400).json({ success: false, message: 'No API key provided.' });
+        }
 
-    console.log('Received from frontend:', safetySettings);
+        const genAI = new GoogleGenerativeAI(keyToValidate);
+        // A cheap way to validate a key is to list the models.
+        await genAI.getGenerativeModel({ model: "gemini-2.5-flash" }).countTokens("test");
 
-    // Use the owner's key or the guest's key
-    const key = isOwner ? process.env.GEMINI_API_KEY : apiKey;
-    if (!key) {
-        return res.status(400).json({ error: 'API Key is required.' });
+        res.json({ success: true, type: isOwner ? 'owner' : 'guest' });
+    } catch (error) {
+        res.status(401).json({ success: false, message: 'Invalid API Key or password.' });
     }
-    const userGenAI = new GoogleGenerativeAI(key);
-
-    const generativeModel = userGenAI.getGenerativeModel({
-      model: model,
-      safetySettings: safetySettings,
-    });
-
-    console.log('Passing to Gemini API:', { model, safetySettings });
-
-    const result = await generativeModel.generateContent(prompt);
-    const response = await result.response;
-
-    // --- NEW: Check for Safety Blocks ---
-    // If response.text() is empty, it was likely blocked.
-    if (!response.text()) {
-      // Check the specific reason for the block
-      if (response.promptFeedback?.blockReason === 'SAFETY' || response.candidates?.[0]?.finishReason === 'SAFETY') {
-        return res.status(400).json({ 
-          error: 'Response was blocked due to safety settings. Try disabling the relevant safety flags in the UI.' 
-        });
-      } else {
-        // Handle other reasons for an empty response
-        return res.status(500).json({ error: 'The model returned an empty response.' });
-      }
-    }
-    // --- End of New Code ---
-
-    const text = response.text();
-    res.json({ text });
-
-  } catch (error) {
-    console.error('Error processing chat request:', error);
-    // Add a check for authentication errors
-    if (error.message.includes('API key not valid')) {
-        return res.status(401).json({ error: 'The provided API key is not valid.' });
-    }
-    res.status(500).json({ error: 'An error occurred while processing your request.' });
-  }
 });
 
-// 6. Start the server
+
+// Main chat endpoint (mostly unchanged)
+app.post('/api/chat', async (req, res) => {
+    try {
+        // Now accepts 'history' from the frontend
+        const { prompt, model, safetySettings, password, apiKey, history } = req.body;
+        const isOwner = password === process.env.OWNER_PASSWORD;
+        const key = isOwner ? process.env.GEMINI_API_KEY : apiKey;
+
+        console.log('Received from frontend:', safetySettings);
+
+        if (!key) {
+            return res.status(400).json({ error: 'An API Key is required.' });
+        }
+        const userGenAI = new GoogleGenerativeAI(key);
+        const generativeModel = userGenAI.getGenerativeModel({ model: model, safetySettings: safetySettings });
+
+        // --- CONVERSATIONAL CHAT LOGIC ---
+        const chat = generativeModel.startChat({
+            history: history, // Start the chat with the provided history
+            generationConfig: {
+                maxOutputTokens: 10000,
+            },
+        });
+
+        console.log('Passing to Gemini API:', { model, safetySettings });
+
+        const result = await chat.sendMessage(prompt); // Send the new prompt
+        const response = await result.response;
+
+        if (!response.text()) {
+            if (response.promptFeedback?.blockReason === 'SAFETY' || response.candidates?.[0]?.finishReason === 'SAFETY') {
+                return res.status(400).json({ error: 'Response blocked for safety. Adjust safety settings.' });
+            } else {
+                return res.status(500).json({ error: 'Empty response from model.' });
+            }
+        }
+        res.json({ text: response.text() });
+    } catch (error) {
+        if (error.message.includes('API key not valid')) {
+            return res.status(401).json({ error: 'The provided API key is not valid.' });
+        }
+        res.status(500).json({ error: 'An error occurred while processing your request.' });
+    }
+});
+
+
 app.listen(PORT, () => {
-  console.log(`🚀 Server is running on http://localhost:${PORT}`);
+    console.log(`🚀 Server is running on http://localhost:${PORT}`);
 });

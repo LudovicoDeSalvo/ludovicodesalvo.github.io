@@ -4,51 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gemini Web Client</title>
-    <link rel="stylesheet" href="gemini-unshackled.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="gemini-unshackled.css">
 </head>
 <body>
 
     <div id="app-container">
-        <h1>Gemini Web Client</h1>
+        <div class="header-container">
+            <a href="../tools.html" class="home-button" aria-label="Go to Homepage">
+                <span class="material-icons">home</span>
+            </a>
+            <h1>Gemini Unshackled</h1>
+            <div class="header-buttons">
+                <button id="new-chat-btn">New Chat</button>
+            </div>
+        </div>
 
         <div id="settings-panel">
-            <div class="setting-item">
-                <label for="owner-password">Owner Password:</label>
-                <input type="password" id="owner-password" placeholder="Enter password for default API key">
-            </div>
-            <div class="setting-item" id="api-key-container">
-                <label for="api-key">Your Gemini API Key:</label>
-                <input type="text" id="api-key" placeholder="Enter your key if you're not the owner">
+            <div id="api-status-indicator" class="status-neutral">
+                <span class="status-icon">●</span>
+                <span id="status-text">Awaiting API Key</span>
             </div>
 
-            <fieldset class="setting-item">
-                <legend>Model Selection</legend>
+            <div class="input-group">
+                <input type="password" id="owner-password" placeholder="Enter Owner Password">
+                <button id="check-password-btn">Activate</button>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="api-key" placeholder="Or, Enter Guest API Key">
+                <button id="check-api-key-btn">Validate</button>
+            </div>
+            
+            <div class="input-group model-selection">
                 <input type="radio" id="gemini-flash" name="model" value="gemini-2.5-flash" checked>
                 <label for="gemini-flash">Gemini 2.5 Flash</label>
                 <input type="radio" id="gemini-pro" name="model" value="gemini-2.5-pro">
                 <label for="gemini-pro">Gemini 2.5 Pro</label>
-            </fieldset>
-
-            <fieldset class="setting-item" id="safety-settings">
-                <legend>Disable Safety Flags (Block None)</legend>
-                <input type="checkbox" id="harm-category-harassment" value="HARM_CATEGORY_HARASSMENT">
-                <label for="harm-category-harassment">Harassment</label>
-                <input type="checkbox" id="harm-category-hate-speech" value="HARM_CATEGORY_HATE_SPEECH">
-                <label for="harm-category-hate-speech">Hate Speech</label>
-                <input type="checkbox" id="harm-category-sexually-explicit" value="HARM_CATEGORY_SEXUALLY_EXPLICIT">
-                <label for="harm-category-sexually-explicit">Sexually Explicit</label>
-                <input type="checkbox" id="harm-category-dangerous-content" value="HARM_CATEGORY_DANGEROUS_CONTENT">
-                <label for="harm-category-dangerous-content">Dangerous Content</label>
-            </fieldset>
-        </div>
-
-        <div id="chat-window">
             </div>
 
+            <div class="toggle-switch-container">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="safety-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span>Disable All Safety Filters</span>
+            </div>
+
+                        <div class="toggle-switch-container">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="adversarial-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span>Adversarial Mode</span>
+            </div>
+        </div>
+
+        <div id="chat-window"></div>
+
         <form id="prompt-form">
-            <input type="text" id="prompt-input" placeholder="Enter your prompt..." autocomplete="off">
-            <button type="submit">Send</button>
+            <input type="text" id="prompt-input" placeholder="Validate an API key to begin..." autocomplete="off" disabled>
+            <button type="submit" disabled>Send</button>
         </form>
     </div>
 
