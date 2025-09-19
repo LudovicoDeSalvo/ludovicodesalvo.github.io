@@ -2,12 +2,170 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CV</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - AI Engineer</title>
+    <link rel="stylesheet" href="cv-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <a href="../index.html" style="font-size: 1.5rem; color: #e0e0e0;">Back to Home</a>
 
-    <h1 style="text-align: center; margin-top: 2rem;">CV Page</h1>
+    <nav class="sidebar">
+        <div class="sidebar-intro">
+            <img src="profile-400px.webp" alt="Your Name - Profile Picture" width="150">
+            <p data-lang-en="M.Sc. Student in AI & Computer Science Engineering" data-lang-it="Studente Magistrale in IA & Ingegneria Informatica">
+                M.Sc. Student in AI & Computer Science Engineering
+            </p>
+        </div>
+
+        <h1 data-lang-en="Your Name" data-lang-it="Il Tuo Nome">Your Name</h1>
+
+        <div class="nav-items">
+            <ul class="contact-links">
+                <li>
+                    <a href="tel:+1234567890" aria-label="Phone">
+                        <i class="fas fa-phone"></i>
+                        <span class="link-text" data-lang-en="Phone" data-lang-it="Telefono">Phone</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:your.email@example.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                        <span class="link-text">Email</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                        <span class="link-text">LinkedIn</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span class="link-text">GitHub</span>
+                    </a>
+                </li>
+            </ul>
+
+            <button id="lang-switcher" title="Change Language">EN/IT</button>
+        </div>
+    </nav>
+
+    <main>
+        <header>
+            <section class="summary">
+                <h2 data-lang-en="Professional Summary" data-lang-it="Profilo Professionale">Professional Summary</h2>
+                <p data-lang-en="A highly motivated M.Sc. AI student..." data-lang-it="Studente magistrale in IA altamente motivato...">
+                    A highly motivated M.Sc. AI student...
+                </p>
+            </section>
+        </header>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <article>
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>JavaScript</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Frameworks & Libraries</h3>
+                <ul>
+                    <li>TensorFlow</li>
+                    <li>PyTorch</li>
+                    <li>Scikit-learn</li>
+                    <li>React.js</li>
+                    <li>Node.js</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Databases</h3>
+                <ul>
+                    <li>SQL (PostgreSQL, MySQL)</li>
+                    <li>NoSQL (MongoDB)</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Cloud & DevOps</h3>
+                <ul>
+                    <li>AWS (S3, EC2)</li>
+                    <li>Docker</li>
+                    <li>Git</li>
+                    <li>CI/CD (GitHub Actions)</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Tools & Technologies</h3>
+                <ul>
+                    <li>Linux/Unix</li>
+                    <li>Jupyter Notebooks</li>
+                    <li>Agile/Scrum Methodologies</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <article>
+                <h3>Software Engineer Intern</h3>
+                <p><strong>Tech Solutions Inc. | City, Country</strong> | June 2024 – August 2024</p>
+                <ul>
+                    <li>Engineered a feature for the main product using Python and Django, which increased user engagement by 15%.</li>
+                    <li>Optimized database queries in PostgreSQL, reducing API response time by 200ms.</li>
+                    <li>Collaborated in an Agile team to develop and test new software modules, contributing to two major version releases.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <article>
+                <h3>Project Name 1 | <a href="#">GitHub</a> | <a href="#">Live Demo</a></h3>
+                <ul>
+                    <li>Implemented a RESTful API with Node.js for user authentication using JWT to secure endpoints.</li>
+                    <li>Designed and built a CI/CD pipeline using GitHub Actions to automate testing and deployment to AWS.</li>
+                    <li>Developed the front-end interface with React, improving user experience through a component-based architecture.</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Project Name 2 | <a href="#">GitHub</a></h3>
+                <ul>
+                    <li>Trained a Convolutional Neural Network (CNN) with PyTorch for image classification, achieving 95% accuracy on the test dataset.</li>
+                    <li>Performed data augmentation to prevent overfitting and improve model generalization.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <article>
+                <h3>Master of Science in Artificial Intelligence</h3>
+                <p><strong>University Name | City, Country</strong></p>
+            </article>
+            <article>
+                <h3>Bachelor of Science in Computer Science Engineering</h3>
+                <p><strong>University Name | City, Country</strong></p>
+            </article>
+        </section>
+
+        <section id="languages">
+            <h2>Languages</h2>
+            <ul>
+                <li>Language 1 (e.g., Italian): C2 (Native)</li>
+                <li>Language 2 (e.g., English): C1 (Advanced)</li>
+                <li>Language 3 (e.g., French): B1 (Intermediate)</li>
+            </ul>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+
 </body>
 </html>
