@@ -53,9 +53,9 @@ body {
 
 .nav-items {
     display: flex;
-    flex-direction: column; /* FIX: Stack items vertically on mobile by default */
+    flex-direction: row;
+    justify-content: space-between; /* Pushes items to the edges */
     align-items: center;
-    gap: 20px;
 }
 
 .contact-links {

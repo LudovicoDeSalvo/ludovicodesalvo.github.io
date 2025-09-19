@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const sidebar = document.querySelector('.sidebar');
     const body = document.body;
-    const scrollThreshold = 280;
+    const scrollThreshold = 210;
 
     // Listen for the 'scroll' event on the window
     window.addEventListener('scroll', () => {
