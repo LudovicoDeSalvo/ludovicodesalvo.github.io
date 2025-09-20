@@ -15,8 +15,8 @@
     <nav class="sidebar">
         <div class="sidebar-intro">
             <img src="profile-400px.webp" alt="Your Name - Profile Picture" width="150">
-            <p data-lang-en="M.Sc. Student in AI & Computer Science Engineering" data-lang-it="Studente Magistrale in IA & Ingegneria Informatica">
-                M.Sc. Student in AI & Computer Science Engineering
+            <p data-lang-en="AI Engineer & Management Engineer" data-lang-it="Ingegnere in AI & Ingegnere Gestionale">
+                .
             </p>
         </div>
 
@@ -24,16 +24,17 @@
 
         <div class="nav-items">
             <ul class="contact-links">
+                
                 <li>
-                    <a href="tel:+1234567890" aria-label="Phone">
-                        <i class="fas fa-phone"></i>
-                        <span class="link-text" data-lang-en="Phone" data-lang-it="Telefono">Phone</span>
+                    <a href="mailto:ludovicodesalvo@proton.me" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                        <span class="link-text">Email</span>
                     </a>
                 </li>
                 <li>
-                    <a href="mailto:your.email@example.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                        <span class="link-text">Email</span>
+                    <a href="https://github.com/LudovicoDeSalvo" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span class="link-text">GitHub</span>
                     </a>
                 </li>
                 <li>
@@ -43,9 +44,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                        <span class="link-text">GitHub</span>
+                    <a href="https://ludovicodesalvo.github.io/" aria-label="Website">
+                        <i class="fas fa-globe"></i>
+                        <span class="link-text" data-lang-en="My Website" data-lang-it="Sito Web">Website</span>
                     </a>
                 </li>
             </ul>
@@ -64,103 +65,123 @@
             </section>
         </header>
 
+        <section id="education">
+            <h2 data-lang-en="Education" data-lang-it="Istruzione">Education</h2>
+            <article>
+                <h3>Master Student in Artificial Intelligence & Robotics</h3>
+                <p><strong>Sapienza University of Rome | Rome, Italy</strong> | 2024 - Present</p>
+                <h4>Relevant Already Completed Coursework:</h4>
+                <ul>
+                    <li>Neural Networks</li>
+                    <li>Deep Learning</li>
+                    <li>Multilingual Natural Language Processing (MNLP)</li>
+                    <li>Computer Vision</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Bachelor Degree in Management Engineering (L-8)</h3>
+                <p><strong>Università della Calabria | Rende, Italy</strong> | 2017 - 2024</p>
+            </article>
+        </section>
+
+        <section id="projects">
+            <h2 data-lang-en="Projects" data-lang-it="Progetti">Projects</h2>
+            
+            <div class="projects-container">
+
+                <article class="project-card">
+                    <img src="projects-pics/p1.webp" alt="Project 1 Preview">
+                    <div class="project-content">
+                        <h3>Licence Plate Image Recognizer</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/LudovicoDeSalvo/Licence-Plate-Image-Recognizer" aria-label="GitHub repository for Project 1" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                        <p>
+                        Team project of full pipeline for license plate detection and recognition, using YOLOv5 for detection and two recognition models: CNN + LSTM + CTC baseline and transformer-based PDLPR model. 
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="projects-pics/p2.webp" alt="Project 2 Preview">
+                    <div class="project-content">
+                        <h3>Water Bodies Segmentation</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/clara0goncalves/NN_Project_2025/tree/Best" aria-label="GitHub repository for Project 2" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                        <p>
+                        Team porject of comprehensive PyTorch pipeline for water body segmentation from satellite imagery, featuring a selection of advanced deep learning models, modern training optimizations, and an interactive CLI to streamline the entire workflow from training to evaluation.                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="projects-pics/p3.gif" alt="Project 3 Preview">
+                    <div class="project-content">
+                        <h3>Avoid</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/LudovicoDeSalvo/Avoid" aria-label="GitHub repository for Project 3" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                            <a href="https://lastnight0.itch.io/avoid" aria-label="itch.io project" title="View on itch.io"><i class="fab fa-itch-io"></i></a>
+                        </div>
+                        <p>
+                           Published web-game meant to be a coding challenge, made entirely in Javascript with almost all the features coded from scratch. 
+                        </p>
+                    </div>
+                </article>
+
+            </div> <div class="more-projects-link">
+                <p data-lang-en="This website is also a project!" data-lang-it="Anche questo sito web è un progetto!">
+                    This website is also one of my projects!
+                </p>
+                <a href="https://ludovicodesalvo.github.io/projects/projects.html" class="btn" data-lang-en="See All My Projects" data-lang-it="Vedi Tutti i Progetti">See All My Projects</a>
+            </div>
+
+        </section>
+
         <section id="skills">
-            <h2>Skills</h2>
+            <h2 data-lang-en="Technical Skills" data-lang-it="Competenze Tecniche">Technical Skills</h2>
             <article>
-                <h3>Programming Languages</h3>
+                <h3>Programming & Scripting</h3>
                 <ul>
-                    <li>Python</li>
-                    <li>Java</li>
-                    <li>C++</li>
-                    <li>JavaScript</li>
+                    <li><strong>Languages:</strong> Python, Java, C++, Visual Basic, GDScript</li>
+                    <li><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
                 </ul>
             </article>
             <article>
-                <h3>Frameworks & Libraries</h3>
+                <h3>Frameworks & Technologies</h3>
                 <ul>
-                    <li>TensorFlow</li>
-                    <li>PyTorch</li>
-                    <li>Scikit-learn</li>
-                    <li>React.js</li>
-                    <li>Node.js</li>
+                    <li><strong>Data Science & AI:</strong> PyTorch, NumPy, Pandas</li>
+                    <li><strong>Data Visualization:</strong> Matplotlib, Seaborn</li>
+                    <li><strong>Robotics & Build Automation:</strong> ROS (Robot Operating System), CMake</li>
+                    <li><strong>Development Tools:</strong> Git, Jupyter Notebooks</li>
                 </ul>
             </article>
             <article>
-                <h3>Databases</h3>
+                <h3>Software & Platforms</h3>
                 <ul>
-                    <li>SQL (PostgreSQL, MySQL)</li>
-                    <li>NoSQL (MongoDB)</li>
-                </ul>
-            </article>
-            <article>
-                <h3>Cloud & DevOps</h3>
-                <ul>
-                    <li>AWS (S3, EC2)</li>
-                    <li>Docker</li>
-                    <li>Git</li>
-                    <li>CI/CD (GitHub Actions)</li>
-                </ul>
-            </article>
-            <article>
-                <h3>Tools & Technologies</h3>
-                <ul>
-                    <li>Linux/Unix</li>
-                    <li>Jupyter Notebooks</li>
-                    <li>Agile/Scrum Methodologies</li>
+                    <li><strong>Operating Systems:</strong> Linux, Windows</li>
+                    <li><strong>Productivity:</strong> Microsoft Office Suite (Word, Excel, PowerPoint)</li>
                 </ul>
             </article>
         </section>
 
         <section id="experience">
-            <h2>Work Experience</h2>
+            <h2 data-lang-en="Work Experience" data-lang-it="Esperienza Lavorativa">Work Experience</h2>
             <article>
-                <h3>Software Engineer Intern</h3>
-                <p><strong>Tech Solutions Inc. | City, Country</strong> | June 2024 – August 2024</p>
+                <h3>Waiter</h3>
+                <p><strong>"Ristorantino" Restaurant | Trebisacce, Italy</strong> | Summer 2020 & Summer 2019</p>
                 <ul>
-                    <li>Engineered a feature for the main product using Python and Django, which increased user engagement by 15%.</li>
-                    <li>Optimized database queries in PostgreSQL, reducing API response time by 200ms.</li>
-                    <li>Collaborated in an Agile team to develop and test new software modules, contributing to two major version releases.</li>
+                    <li>Developed strong communication and interpersonal skills by serving a diverse clientele in a fast-paced environment.</li>
+                    <li>Cultivated teamwork abilities and enhanced self-awareness about personal strengths and weaknesses.</li>
+                    <li>Collaborated effectively with kitchen and front-of-house staff to ensure timely and high-quality service.</li>
                 </ul>
-            </article>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <article>
-                <h3>Project Name 1 | <a href="#">GitHub</a> | <a href="#">Live Demo</a></h3>
-                <ul>
-                    <li>Implemented a RESTful API with Node.js for user authentication using JWT to secure endpoints.</li>
-                    <li>Designed and built a CI/CD pipeline using GitHub Actions to automate testing and deployment to AWS.</li>
-                    <li>Developed the front-end interface with React, improving user experience through a component-based architecture.</li>
-                </ul>
-            </article>
-            <article>
-                <h3>Project Name 2 | <a href="#">GitHub</a></h3>
-                <ul>
-                    <li>Trained a Convolutional Neural Network (CNN) with PyTorch for image classification, achieving 95% accuracy on the test dataset.</li>
-                    <li>Performed data augmentation to prevent overfitting and improve model generalization.</li>
-                </ul>
-            </article>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            <article>
-                <h3>Master of Science in Artificial Intelligence</h3>
-                <p><strong>University Name | City, Country</strong></p>
-            </article>
-            <article>
-                <h3>Bachelor of Science in Computer Science Engineering</h3>
-                <p><strong>University Name | City, Country</strong></p>
             </article>
         </section>
 
         <section id="languages">
-            <h2>Languages</h2>
+            <h2 data-lang-en="Languages" data-lang-it="Lingue">Languages</h2>
             <ul>
-                <li>Language 1 (e.g., Italian): C2 (Native)</li>
-                <li>Language 2 (e.g., English): C1 (Advanced)</li>
-                <li>Language 3 (e.g., French): B1 (Intermediate)</li>
+                <li><strong>Italian:</strong> Native (C2)</li>
+                <li><strong>English:</strong> C1 Advanced (IELTS Certified) – Proficiency enhanced through academic immersion in London and Edinburgh.</li>
             </ul>
         </section>
     </main>
