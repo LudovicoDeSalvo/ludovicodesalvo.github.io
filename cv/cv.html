@@ -8,16 +8,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
     <nav class="sidebar">
         <div class="sidebar-intro">
-            <img src="profile-400px.webp" alt="Your Name - Profile Picture" width="150">
+            <img src="prof-pic.webp" alt="Your Name - Profile Picture" width="150">
             <p data-lang-en="AI Engineer & Management Engineer" data-lang-it="Ingegnere in AI & Ingegnere Gestionale">
-                .
+                AI Engineer & Management Engineer
             </p>
+
+            <div class="sidebar-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span data-lang-en="Rome, Italy" data-lang-it="Roma, Italia">Rome, Italy</span>
+            </div>
         </div>
 
         <h1 data-lang-en="Ludovico De&nbsp;Salvo" data-lang-it="Ludovico De&nbsp;Salvo">Ludovico De Salvo</h1>
@@ -28,19 +33,19 @@
                 <li>
                     <a href="mailto:ludovicodesalvo@proton.me" aria-label="Email">
                         <i class="fas fa-envelope"></i>
-                        <span class="link-text">Email</span>
+                        <span class="link-text" data-lang-en="Email" data-lang-it="Email">Email</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://github.com/LudovicoDeSalvo" aria-label="GitHub">
                         <i class="fab fa-github"></i>
-                        <span class="link-text">GitHub</span>
+                        <span class="link-text" data-lang-en="GitHub" data-lang-it="GitHub">GitHub</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
-                        <span class="link-text">LinkedIn</span>
+                        <span class="link-text" data-lang-en="LinkedIn" data-lang-it="LinkedIn">LinkedIn</span>
                     </a>
                 </li>
                 <li>
@@ -59,8 +64,8 @@
         <header>
             <section class="summary">
                 <h2 data-lang-en="Professional Summary" data-lang-it="Profilo Professionale">Professional Summary</h2>
-                <p data-lang-en="A highly motivated M.Sc. AI student..." data-lang-it="Studente magistrale in IA altamente motivato...">
-                    A highly motivated M.Sc. AI student...
+                <p class="summary-text" data-lang-en="Master Student in Artificial Intelligence and Robotics with a Bachelor Degree in Management Engineering. Eager to apply advanced theoretical knowledge of machine learning and data analysis to solve complex problems. Seeking a part-time role to contribute to real-world projects while completing advanced studies." data-lang-it="Studente magistrale in Intelligenza Artificiale e Robotica con laurea in Ingegneria Gestionale. Volenteroso di applicare conoscenze teoriche avanzate di machine learning e analisi di dati per risolvere problemi complessi. In cerca di un ruolo part-time per contribuire a progetti reali durante il completamento degli studi.">
+                    Master Student in Artificial Intelligence and Robotics with a Bachelor Degree in Management Engineering. Eager to apply advanced theoretical knowledge of machine learning and data analysis to solve complex problems. Seeking a part-time role to contribute to real-world projects while completing advanced studies.
                 </p>
             </section>
         </header>
@@ -68,9 +73,9 @@
         <section id="education">
             <h2 data-lang-en="Education" data-lang-it="Istruzione">Education</h2>
             <article>
-                <h3>Master Student in Artificial Intelligence & Robotics</h3>
+                <h3 data-lang-en="Master Student in Artificial Intelligence & Robotics" data-lang-it="Studente Magistrale in Intelligenza Artificiale e Robotica">Master Student in Artificial Intelligence & Robotics</h3>
                 <p><strong>Sapienza University of Rome | Rome, Italy</strong> | 2024 - Present</p>
-                <h4>Relevant Already Completed Coursework:</h4>
+                <h4 data-lang-en="Relevant Already Completed Coursework:" data-lang-it="Corsi Rilevanti Già Completati:">Relevant Already Completed Coursework:</h4>
                 <ul>
                     <li>Neural Networks</li>
                     <li>Deep Learning</li>
@@ -79,25 +84,25 @@
                 </ul>
             </article>
             <article>
-                <h3>Bachelor Degree in Management Engineering (L-8)</h3>
-                <p><strong>Università della Calabria | Rende, Italy</strong> | 2017 - 2024</p>
+                <h3 data-lang-en="Bachelor Degree in Management Engineering (L-8)" data-lang-it="Laurea Triennale in Ingegneria Gestionale (L-8)">Bachelor Degree in Management Engineering (L-8)</h3>
+                <p><strong>Università della Calabria | Rende, <span data-lang-en="Italy" data-lang-it="Italia">Italy</span></strong> | 2017 - 2024</p>
             </article>
         </section>
 
         <section id="projects">
-            <h2 data-lang-en="Projects" data-lang-it="Progetti">Projects</h2>
+            <h2 data-lang-en="Relevant Projects" data-lang-it="Progetti Rilevanti">Projects</h2>
             
             <div class="projects-container">
 
                 <article class="project-card">
                     <img src="projects-pics/p1.webp" alt="Project 1 Preview">
                     <div class="project-content">
-                        <h3>Licence Plate Image Recognizer</h3>
+                        <h3 data-lang-en="Licence Plate Image Recognizer" data-lang-it="Riconoscitore di Targhe da Immagini">Licence Plate Image Recognizer</h3>
                         <div class="project-links">
                             <a href="https://github.com/LudovicoDeSalvo/Licence-Plate-Image-Recognizer" aria-label="GitHub repository for Project 1" title="GitHub Repository"><i class="fab fa-github"></i></a>
                         </div>
-                        <p>
-                        Team project of full pipeline for license plate detection and recognition, using YOLOv5 for detection and two recognition models: CNN + LSTM + CTC baseline and transformer-based PDLPR model. 
+                        <p data-lang-en="Full pipeline for license plate detection and recognition, using YOLOv5 for detection and two recognition models: CNN + LSTM + CTC baseline and transformer-based PDLPR model. 2-people team in which each worked on every aspect of the pipeline." data-lang-it="Pipeline completa per il rilevamento e riconoscimento di targhe, utilizzando YOLOv5 per il rilevamento e due modelli di riconoscimento: un modello base CNN + LSTM + CTC e un modello PDLPR basato su transformer. Team di 2 persone in cui ognuno ha lavorato su ogni aspetto della pipeline.">
+                        Full pipeline for license plate detection and recognition, using YOLOv5 for detection and two recognition models: CNN + LSTM + CTC baseline and transformer-based PDLPR model. 2-people team in which each worked on every aspect of the pipeline.
                         </p>
                     </div>
                 </article>
@@ -105,24 +110,25 @@
                 <article class="project-card">
                     <img src="projects-pics/p2.webp" alt="Project 2 Preview">
                     <div class="project-content">
-                        <h3>Water Bodies Segmentation</h3>
+                        <h3 data-lang-en="Water Bodies Segmentation" data-lang-it="Segmentazione di Corpi Idrici">Water Bodies Segmentation</h3>
                         <div class="project-links">
                             <a href="https://github.com/clara0goncalves/NN_Project_2025/tree/Best" aria-label="GitHub repository for Project 2" title="GitHub Repository"><i class="fab fa-github"></i></a>
                         </div>
-                        <p>
-                        Team porject of comprehensive PyTorch pipeline for water body segmentation from satellite imagery, featuring a selection of advanced deep learning models, modern training optimizations, and an interactive CLI to streamline the entire workflow from training to evaluation.                        </p>
+                        <p data-lang-en="Comprehensive PyTorch pipeline for water body segmentation from satellite imagery, featuring a selection of advanced deep learning models, modern training optimizations, and an interactive CLI to streamline the entire workflow from training to evaluation. 2-people team in which each worked on every aspect of the pipeline." data-lang-it="Pipeline PyTorch completa per la segmentazione di corpi idrici da immagini satellitari, con una selezione di modelli di deep learning avanzati, ottimizzazioni moderne per l'addestramento e una CLI interattiva per snellire l'intero flusso di lavoro, dall'addestramento alla valutazione. Team di 2 persone in cui ognuno ha lavorato su ogni aspetto della pipeline.">
+                        Comprehensive PyTorch pipeline for water body segmentation from satellite imagery, featuring a selection of advanced deep learning models, modern training optimizations, and an interactive CLI to streamline the entire workflow from training to evaluation. 2-people team in which each worked on every aspect of the pipeline.
+                        </p>
                     </div>
                 </article>
 
                 <article class="project-card">
                     <img src="projects-pics/p3.gif" alt="Project 3 Preview">
                     <div class="project-content">
-                        <h3>Avoid</h3>
+                        <h3 data-lang-en="Avoid" data-lang-it="Avoid">Avoid</h3>
                         <div class="project-links">
                             <a href="https://github.com/LudovicoDeSalvo/Avoid" aria-label="GitHub repository for Project 3" title="GitHub Repository"><i class="fab fa-github"></i></a>
                             <a href="https://lastnight0.itch.io/avoid" aria-label="itch.io project" title="View on itch.io"><i class="fab fa-itch-io"></i></a>
                         </div>
-                        <p>
+                        <p data-lang-en="Published web-game meant to be a coding challenge, made entirely in Javascript with almost all the features coded from scratch, including the collision system and the entity system." data-lang-it="Videogioco web pubblicato, concepito come una sfida di programmazione, realizzato interamente in Javascript con quasi tutte le funzionalità codificate da zero, compresi il sistema di collisioni e il sistema di entità.">
                            Published web-game meant to be a coding challenge, made entirely in Javascript with almost all the features coded from scratch. 
                         </p>
                     </div>
@@ -140,26 +146,26 @@
         <section id="skills">
             <h2 data-lang-en="Technical Skills" data-lang-it="Competenze Tecniche">Technical Skills</h2>
             <article>
-                <h3>Programming & Scripting</h3>
+                <h3 data-lang-en="Programming & Scripting" data-lang-it="Programmazione e Scripting">Programming & Scripting</h3>
                 <ul>
-                    <li><strong>Languages:</strong> Python, Java, C++, Visual Basic, GDScript</li>
-                    <li><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
+                    <li data-lang-en="Languages: Python, Java, C++, GDScript" data-lang-it="Linguaggi: Python, Java, C++, GDScript"><strong>Languages:</strong> Python, Java, C++, GDScript</li>
+                    <li data-lang-en="Web Development: HTML, CSS, JavaScript" data-lang-it="Sviluppo Web: HTML, CSS, JavaScript"><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
                 </ul>
             </article>
             <article>
-                <h3>Frameworks & Technologies</h3>
+                <h3 data-lang-en="Frameworks & Technologies" data-lang-it="Framework e Tecnologie">Frameworks & Technologies</h3>
                 <ul>
-                    <li><strong>Data Science & AI:</strong> PyTorch, NumPy, Pandas</li>
-                    <li><strong>Data Visualization:</strong> Matplotlib, Seaborn</li>
-                    <li><strong>Robotics & Build Automation:</strong> ROS (Robot Operating System), CMake</li>
-                    <li><strong>Development Tools:</strong> Git, Jupyter Notebooks</li>
+                    <li data-lang-en="Data Science & AI: PyTorch, NumPy, Pandas" data-lang-it="Data Science e AI: PyTorch, NumPy, Pandas"><strong>Data Science & AI:</strong> PyTorch, NumPy, Pandas</li>
+                    <li data-lang-en="Data Visualization: Matplotlib, Seaborn" data-lang-it="Visualizzazione Dati: Matplotlib, Seaborn"><strong>Data Visualization:</strong> Matplotlib, Seaborn</li>
+                    <li data-lang-en="Robotics & Build Automation: ROS (Robot Operating System), CMake" data-lang-it="Robotica e Build Automation: ROS (Robot Operating System), CMake"><strong>Robotics & Build Automation:</strong> ROS (Robot Operating System), CMake</li>
+                    <li data-lang-en="Development Tools: Git, Jupyter Notebooks" data-lang-it="Strumenti di Sviluppo: Git, Jupyter Notebooks"><strong>Development Tools:</strong> Git, Jupyter Notebooks</li>
                 </ul>
             </article>
             <article>
-                <h3>Software & Platforms</h3>
+                <h3 data-lang-en="Software & Platforms" data-lang-it="Software e Piattaforme">Software & Platforms</h3>
                 <ul>
-                    <li><strong>Operating Systems:</strong> Linux, Windows</li>
-                    <li><strong>Productivity:</strong> Microsoft Office Suite (Word, Excel, PowerPoint)</li>
+                    <li data-lang-en="Operating Systems: Linux, Windows" data-lang-it="Sistemi Operativi: Linux, Windows"><strong>Operating Systems:</strong> Linux, Windows</li>
+                    <li data-lang-en="Productivity: Microsoft Office Suite (Word, Excel, PowerPoint)" data-lang-it="Produttività: Microsoft Office Suite (Word, Excel, PowerPoint)"><strong>Productivity:</strong> Microsoft Office Suite (Word, Excel, PowerPoint)</li>
                 </ul>
             </article>
         </section>
@@ -167,21 +173,19 @@
         <section id="experience">
             <h2 data-lang-en="Work Experience" data-lang-it="Esperienza Lavorativa">Work Experience</h2>
             <article>
-                <h3>Waiter</h3>
-                <p><strong>"Ristorantino" Restaurant | Trebisacce, Italy</strong> | Summer 2020 & Summer 2019</p>
-                <ul>
-                    <li>Developed strong communication and interpersonal skills by serving a diverse clientele in a fast-paced environment.</li>
-                    <li>Cultivated teamwork abilities and enhanced self-awareness about personal strengths and weaknesses.</li>
-                    <li>Collaborated effectively with kitchen and front-of-house staff to ensure timely and high-quality service.</li>
-                </ul>
+                <h3 data-lang-en="Waiter" data-lang-it="Cameriere">Waiter</h3>
+                <p>
+                    <strong>"Ristorantino" <span data-lang-en="Restaurant" data-lang-it="Ristorante">Restaurant</span> | Trebisacce, <span data-lang-en="Italy" data-lang-it="Italia">Italy</span></strong> 
+                    | <span data-lang-en="Summer" data-lang-it="Estate">Summer</span> 2020 <span data-lang-en="&" data-lang-it="e">&amp;</span> <span data-lang-en="Summer" data-lang-it="Estate">Summer</span> 2019
+                </p>
             </article>
         </section>
 
         <section id="languages">
             <h2 data-lang-en="Languages" data-lang-it="Lingue">Languages</h2>
             <ul>
-                <li><strong>Italian:</strong> Native (C2)</li>
-                <li><strong>English:</strong> C1 Advanced (IELTS Certified) – Proficiency enhanced through academic immersion in London and Edinburgh.</li>
+                <li data-lang-en="Italian: Native (C2)" data-lang-it="Italiano: Madrelingua (C2)"><strong>Italian:</strong> Native (C2)</li>
+                <li data-lang-en="English: C1 Advanced (IELTS Certified) - Proficiency enhanced through academic immersion in London and Edinburgh." data-lang-it="Inglese: C1 Avanzato (Certificato IELTS) – Competenza migliorata attraverso l'immersione accademica a Londra ed Edimburgo."><strong>English:</strong> C1 Advanced (IELTS Certified) – Proficiency enhanced through academic immersion in London and Edinburgh.</li>
             </ul>
         </section>
     </main>

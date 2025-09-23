@@ -355,3 +355,21 @@ main a:hover {
     background-color: #0056b3;
     text-decoration: none;
 }
+
+.sidebar-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* The space between the icon and the text */
+    margin-top: 10px; /* Space above this new line */
+    opacity: 0.8; /* Matches the style of the job title paragraph */
+}
+
+.sidebar-detail span {
+    /* Ensures the text has the right size if we want to change it later */
+    font-size: 1em; 
+}
+
+.summary-text {
+    margin-bottom: 25px; /* Creates a 25px gap below the paragraph */
+}
